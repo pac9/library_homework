@@ -1,13 +1,28 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 
     private ArrayList<Book> stock;
     private int capacity;
 
+    private HashMap<String, Integer> booksGenre = new HashMap<>();
+
+
     public Library(){
         this.stock = new ArrayList<>();
         this.capacity = capacity;
+
+        booksGenre.put("Romance", 100);
+        booksGenre.put("Crime", 180);
+        booksGenre.put("Science Fiction", 90);
+        booksGenre.put("Biography", 50);
+
+        Integer romanceTotal = booksGenre.get("Romance");
+        String output = "The Romance books in stock are " + romanceTotal.toString();
+
+        System.out.println(output);
+
     }
 
 //    public int getBooks(){
@@ -45,5 +60,7 @@ public class Library {
     public Book removeBook(){
         return this.stock.remove(0);
     }
+
+
 
 }
