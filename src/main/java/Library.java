@@ -40,8 +40,10 @@ public class Library {
         if (bookCount() < getCapacity()) {
             this.addBook(stock);
         }
-
     }
 
+    public Book removeBook(){
+        return this.stock.remove(0);
+    }
 
 }

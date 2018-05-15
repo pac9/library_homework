@@ -44,4 +44,11 @@ public class LibraryTest {
     }
 
 
+    @Test
+    public void canBorrowBook() {
+        library.addBook(stock);
+        library.removeBook();
+        assertEquals(0, library.bookCount());
+    }
+
 }
