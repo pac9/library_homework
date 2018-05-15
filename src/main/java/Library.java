@@ -18,10 +18,26 @@ public class Library {
         booksGenre.put("Science Fiction", 90);
         booksGenre.put("Biography", 50);
 
-        Integer romanceTotal = booksGenre.get("Romance");
-        String output = "The Romance books in stock are " + romanceTotal.toString();
+//        Integer romanceTotal = booksGenre.get("Romance");
+//        String output = "The Romance books in stock are " + romanceTotal.toString();
+//
+//        System.out.println(output);
+//        System.out.println(booksGenre.keySet().toString());
+//        for (String key:booksGenre.keySet()){
+//                System.out.println(key);
+//
+////
+//        }
+//        for (Integer num : booksGenre.values()) {
+////            System.out.println(num);
+////        }
+        for (String name: booksGenre.keySet()){
 
-        System.out.println(output);
+            String key = name;
+            Integer value = booksGenre.get(name);
+            System.out.println(key + " " + value);
+
+        }
 
     }
 
